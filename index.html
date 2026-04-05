@@ -36,4 +36,67 @@
             border-radius: 50px;
             cursor: pointer;
             font-weight: bold;
-            box-shadow: 0 5px 20px rgba(0,0
+            box-shadow: 0 5px 20px rgba(0,0,0,0.4);
+        }
+        .tap-btn { background: #ffd700; color: #4b0082; }
+        .buy-btn { background: #00ff9d; color: #000; }
+        .score { font-size: 26px; margin: 15px; font-weight: bold; text-shadow: 0 0 10px white; }
+        .social-icons img {
+            width: 50px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .social-icons img:hover {
+            transform: scale(1.2);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>🦥 $WOMBIT Wombat</h1>
+
+    <img id="wombat" src="images/wombat.png" onclick="tapWombat()">
+
+    <p>Wombat'a dokun, puan topla ve moon'a yardım et! ✨</p>
+
+    <button class="tap-btn" onclick="tapWombat()">🦥 Wombat'a Dokun!</button>
+
+    <button class="buy-btn" onclick="buyWOMBIT()">💰 $WOMBIT Satın Al</button>
+
+    <p class="score" id="score">Puanın: 0</p>
+
+    <h2>💬 Bizi Takip Et</h2>
+
+    <div class="social-icons" style="display:flex; gap:15px;">
+        <a href="https://x.com/wombat_io" target="_blank">
+            <img src="images/twitter_icon.png">
+        </a>
+        <a href="https://t.me/wombit_io_io" target="_blank">
+            <img src="images/telegram_chat_icon.png">
+        </a>
+        <a href="https://t.me/wombit_io" target="_blank">
+            <img src="images/telegram_channel_icon.png">
+        </a>
+        <a href="https://www.tiktok.com/@wombat_io" target="_blank">
+            <img src="images/tiktok_icon.png">
+        </a>
+    </div>
+
+    <script>
+        let score = 0;
+        const tg = window.Telegram.WebApp;
+        tg.ready();
+        tg.expand();
+
+        function tapWombat() {
+            score += 15;
+            document.getElementById('score').textContent = 'Puanın: ' + score;
+        }
+
+        function buyWOMBIT() {
+            window.open("https://bags.fm/3fzFmWRedsjuybCgic1rkkZAdKhzeHVvxs7sGBgrBAGS", "_blank");
+        }
+    </script>
+
+</body>
+</html>
