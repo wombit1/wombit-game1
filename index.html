@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>$WOMBIT Wombat Oyunu 🦥</title>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <style>
+        body { 
+            margin: 0; padding: 0;
+            background: linear-gradient(to bottom, #4b0082, #8a2be2, #ff69b4); 
+            color: white; 
+            font-family: Arial, sans-serif; 
+            text-align: center; 
+            height: 100vh; 
+            display: flex; 
+            flex-direction: column; 
+            justify-content: center; 
+            align-items: center;
+            overflow: hidden;
+        }
+        img { 
+            width: 280px; 
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        img:active { 
+            transform: scale(1.25) rotate(10deg) translateY(-30px); 
+        }
+        h1 { font-size: 28px; margin: 10px 0; text-shadow: 0 0 15px gold; }
+        button {
+            margin: 15px 10px;
+            padding: 16px 36px;
+            font-size: 20px;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: bold;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.4);
+        }
+        .tap-btn { background: #ffd700; color: #4b0082; }
+        .buy-btn { background: #00ff9d; color: #000; }
+        .score { font-size: 26px; margin: 15px; font-weight: bold; text-shadow: 0 0 10px white; }
+        .social-icons img {
+            width: 50px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .social-icons img:hover {
+            transform: scale(1.2);
+        }
+    </style>
+</head>
+<body>
+    <!-- Oyun Başlığı -->
+    <h
